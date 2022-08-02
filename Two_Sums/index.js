@@ -10,7 +10,7 @@
   nums[0] + nums[1] == 9, we return [0, 1].
 */
 
-const twoSums = (nums, target) => {
+const twoSum = (nums, target) => {
   // create array to hold the individual index of each number in the array
   let indices = [];
   let noDups = [];
