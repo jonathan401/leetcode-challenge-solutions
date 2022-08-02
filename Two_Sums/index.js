@@ -10,30 +10,6 @@
   nums[0] + nums[1] == 9, we return [0, 1].
 */
 
-const nums = [1, 4, 1, 5, 2, 1];
-
-let indices = [];
-nums.forEach((num) => {
-  let index = nums.indexOf(num);
-  while (index !== -1) {
-    indices.push(index);
-    index = nums.indexOf(num, index + 1);
-  }
-});
-// // console.log(indices);
-// let newPos = [...new Set(indices)];
-// console.log(nums);
-// console.log(newPos);
-// newPos.forEach((pos) => console.log(`${nums[pos]} was found at index ${pos}`));
-// for (i = 0; i < newPos.length; i++) {
-//   for (j = 0; j < newPos.length; j++) {
-//     if (newPos[i] !== newPos[j]) {
-//       console.log(newPos[i], newPos[j]);
-//       console.log(nums[newPos[i]], newPos[i]);
-//     }
-//   }
-// }
-
 const twoSums = (nums, target) => {
   // create array to hold the individual index of each number in the array
   let indices = [];
