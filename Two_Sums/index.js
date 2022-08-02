@@ -13,7 +13,7 @@
 const twoSums = (nums, target) => {
   // create array to hold the individual index of each number in the array
   let indices = [];
-  let noDup = [];
+  let noDups = [];
   let addsUpTo = [];
   nums.forEach((num) => {
     // loop through the main array to get the index of every number without duplicates
@@ -24,13 +24,15 @@ const twoSums = (nums, target) => {
     }
   });
   // convert the gotten array to a set to remove duplicate values
-  noDup = [...new Set(indices)];
-  for (i = 0; i < noDup.length; i++) {
-    for (j = 0; j < noDup.length; j++) {
+  noDups = [...new Set(indices)];
+  for (i = 0; i < noDups.length; i++) {
+    for (j = 0; j < noDups.length; j++) {
       // loop through the non-duplicate array and get every addition combination
-      if (noDup[i] !== noDup[j] && nums[noDup[i]] + nums[noDup[j]] === target) {
-        // console.log(nums[noDup[i]], nums[noDup[j]]);
-        addsUpTo.push([noDup[i], noDup[j]]);
+      if (
+        noDups[i] !== noDups[j] &&
+        nums[noDups[i]] + nums[noDups[j]] === target
+      ) {
+        addsUpTo.push([noDups[i], noDups[j]]);
       }
     }
   }
@@ -39,6 +41,6 @@ const twoSums = (nums, target) => {
 
 // const testCase = [2, 7, 11, 15];
 // const testCase = twoSums([1, 4, 1, 5, 2, 1], 6);
-const testCase = twoSums([2, 7, 11, 15], 9);
-// const testCase = twoSums([3, 3], 6);
+// const testCase = twoSums([2, 7, 11, 15], 9);
+const testCase = twoSums([3, 3], 6);
 console.log(testCase);
