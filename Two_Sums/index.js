@@ -40,7 +40,7 @@ const twoSum = (nums, target) => {
 };
 
 // const testCase = [2, 7, 11, 15];
-// const testCase = twoSums([1, 4, 1, 5, 2, 1], 6);
-// const testCase = twoSums([2, 7, 11, 15], 9);
-const testCase = twoSums([3, 3], 6);
+// const testCase = twoSum([1, 4, 1, 5, 2, 1], 6);
+// const testCase = twoSum([2, 7, 11, 15], 9);
+const testCase = twoSum([3, 3], 6);
 console.log(testCase);
